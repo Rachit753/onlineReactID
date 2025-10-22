@@ -1,0 +1,47 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  padding: 10px;
+  background: #f7f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.ide-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr; /* Left: 200px, Center/Right: Equal flex */
+  height: calc(100vh - 60px); /* Adjust for header */
+}
+
+.file-manager {
+  background-color:rgb(15, 14, 14);
+  color: white;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.code-editor {
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.live-preview {
+    background-color: white;
+    color: black; /* default text color */
+}
+
+/* Responsive: Stack on tablets/small screens */
+@media (max-width: 768px) {
+  .ide-layout {
+    grid-template-columns: 1fr; /* Stack vertically */
+    grid-template-rows: auto 1fr 1fr;
+  }
+  .file-manager {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
