@@ -27,26 +27,6 @@ This setup emulates the basic functionality of an online IDE like CodeSandbox, b
 
 ---
 
-## Project Structure
-
-frontend/
-│
-├── src/
-│ ├── components/
-│ │ ├── CodeEditor.js # Sandpack-based code editor component
-│ │ ├── FileManager.js # Handles adding, deleting, and displaying files
-│ │ ├── LivePreview.js # Real-time React output preview panel
-│ │ └── ProjectSaver.js # (Optional) Component to manage project IDs
-│ │
-│ ├── App.js # Main component combining all sections (editor, preview, file manager)
-│ ├── index.js # React entry point rendering App
-│ └── styles.css # Layout and styling for IDE
-│
-├── package.json
-└── README.md
-
----
-
 ## Component Breakdown
 
 ### **1. App.js**
@@ -77,6 +57,8 @@ frontend/
 
 Acts as a File Explorer in the IDE.
 
+---
+
 ### **3. CodeEditor.js**
 
 Uses SandpackCodeEditor from @codesandbox/sandpack-react.
@@ -89,6 +71,8 @@ Line numbers
 
 Allows users to write or modify code which reflects instantly in the preview.
 
+---
+
 ### **4. LivePreview.js**
 
 Uses SandpackPreview to render the current project in real-time.
@@ -97,6 +81,8 @@ Displays compiled React app output instantly.
 
 showOpenInCodeSandbox is disabled to keep it minimal.
 
+---
+
 ### **5. ProjectSaver.js**
 
 (Optional) Component to load or create a new project by ID.
@@ -104,6 +90,8 @@ showOpenInCodeSandbox is disabled to keep it minimal.
 Generates random project IDs and manages them in state.
 
 Useful for switching between multiple saved projects.
+
+---
 
 ### **6. styles.css**
 
@@ -132,8 +120,10 @@ Feature Description
 
 1. Install Dependencies
 npm install
+
 2. Start Development Server
 npm start
+
 The app will be live at <http://localhost:3000>
 
 ## Future Enhancements
